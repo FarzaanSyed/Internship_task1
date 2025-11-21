@@ -1,6 +1,5 @@
 package JDBC;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,11 +9,9 @@ import java.sql.ResultSet;
 public class Main {
     public static void main(String args[]) {
 
-
         String URL = "jdbc:postgresql://localhost:5432/internship_day1_task1";
         String USERNAME = "postgres";
         String PASSWORD = "2005";
-
 
         Connection conn = null;
         Statement stmt = null;
@@ -23,13 +20,10 @@ public class Main {
         try {
             Class.forName("org.postgresql.Driver");
 
-
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             System.out.println("Connected to PostgreSQL database!");
 
-
             stmt = conn.createStatement();
-
 
             String createTableSQL =
                     "CREATE TABLE IF NOT EXISTS departments (" +
@@ -68,7 +62,6 @@ public class Main {
             e.printStackTrace();
 
         } finally {
-
 
             try { if (rs != null) rs.close(); } catch (SQLException e) {}
             try { if (stmt != null) stmt.close(); } catch (SQLException e) {}
