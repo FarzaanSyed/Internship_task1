@@ -11,9 +11,9 @@ public class Main {
     public static void main(String args[]) {
 
 
-        String URL = "jdbc:postgresql://localhost:5432/internship_task1";
+        String URL = "jdbc:postgresql://localhost:5432/internship_day1_task1";
         String USERNAME = "postgres";
-        String PASSWORD = "010705";
+        String PASSWORD = "2005";
 
 
         Connection conn = null;
